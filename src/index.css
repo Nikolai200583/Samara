@@ -14,6 +14,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid #DEDEDE;
 }
 .item__title {
   text-align: center;
