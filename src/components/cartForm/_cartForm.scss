@@ -1,0 +1,114 @@
+
+.cart__form {
+    background: #F7F6F6;
+    height: 556px;
+    grid-column: span 4;
+    padding-left: 27px;
+    padding-right: 64px;
+    padding-top: 42px;
+    border: none;
+    border-radius: 20px;
+
+    &_name {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        display: flex;
+        justify-content: center;
+        color: #000000;
+        margin-bottom: 35px;
+    }
+
+    &_input {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        width: 288px;
+        height: 143px;
+        margin-bottom: 64px;
+
+        &_name {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #CACDD8;
+
+        }
+
+        &_name::placeholder {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+
+        &_telephone {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #CACDD8;
+
+        }
+
+        &_telephone::placeholder {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+
+        &_adress {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #CACDD8;
+
+        }
+
+        &_adress::placeholder {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+    }
+    &_price {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        justify-content: center;
+        color: #000000;
+        margin-top: 64px;
+
+    }
+    &_buttontwo {
+        background: transparent;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 290px;
+        height: 41px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 28px;
+        transition: all 0.3s;
+        animation: bounce-top 0.9s both;
+        
+        &_box{
+           display: flex;
+           justify-content: center;
+        }
+
+        &:hover {
+            color: #ffffff;
+            background-color: #000000;
+        }
+    }
+    
+}

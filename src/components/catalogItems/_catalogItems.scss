@@ -1,0 +1,10 @@
+.center {
+    padding-left: calc(50% - 720px);
+    padding-right: calc(50% - 720px);
+}
+.catalogItemsBox{
+    display: grid; 
+    gap: 40px 30px;
+    justify-content: center;    
+    grid-template-columns: repeat(4, 270px);
+}

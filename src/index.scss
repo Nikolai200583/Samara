@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+a {
+    text-decoration: none;
+}
+
+@import './components/items/items';
+@import './components/catalogItems/catalogItems';
+@import './components/select/select';
+@import './components/header/header';
+@import './components/cartForm/cartForm';
+@import './components/cart/cart';
+@import './components/cartItem/cartItem';
+@import './components/cartContent/cartContent';
+@import 'mobile';

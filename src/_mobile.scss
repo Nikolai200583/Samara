@@ -1,0 +1,131 @@
+@media(max-width: 767px) {
+    .center {
+        padding-left:16px;
+        padding-right: 16px;
+    }
+    .top {
+        margin-bottom: 32px;
+    }
+    .header {
+        display: flex;
+        justify-content: space-around;
+        gap: 350px;
+        padding-top: 32px;
+        border: none;
+        &_input {
+            display: none;
+        }
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .logo {
+        &_img {
+            width: 99px;
+        }
+    }
+
+    .menu_mob {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+    }
+
+   .header__title {
+        font-size: 48px;
+        line-height: 59px;
+        text-align: center;
+    }
+    .select {
+        font-size: 14px;
+    }
+    .catalogItemsBox {        
+        margin-left: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+    }
+    
+    .item__about {
+        width: 343px;
+        margin-bottom: 8px;
+    }
+
+    .item__price {
+        font-size: 18px;
+        line-height: 22px;
+    }  
+
+    .item {
+        display: grid;
+        grid-column: 1 / -1;
+
+    }
+ /*    корзина   */
+ .cartContainer {    
+    margin-top: 92px;    
+    grid-template-columns: repeat(8, 1fr);
+    row-gap: 64px;
+
+}
+.cart {
+    margin-top: 92px;
+
+    &__name_box {
+        display: none;
+    }
+
+    &__img {
+        display: none;
+    }
+
+    &__item {
+        justify-content: space-around;
+        &_name {
+            Font-size: 18px;
+            Line-height: 22px;
+        }
+
+        &_text {
+            Font-size: 12px;
+            Line-height: 15px;
+        }
+
+        &_price {
+            Font-size: 12px;
+            Line-height: 15px;
+        }
+
+    }
+
+    &__form_button {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    &__button_clear {
+        width: 166px;
+        font-size: 12px;
+    }
+
+    &__button_continue {
+        color: aliceblue;
+        width: 166px;
+        font-size: 12px;
+        background: black;
+    }
+
+    &__form {
+        grid-column: span 8;
+        margin-left: 30px;
+    }
+
+
+
+
+
+
+}
+
+}

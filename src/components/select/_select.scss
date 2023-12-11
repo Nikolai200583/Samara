@@ -1,0 +1,24 @@
+.select {
+    width: 288px;
+    height: 41px;
+    box-sizing: border-box;
+    border: 1px solid #C4C4C4;
+    border-radius: 20px;
+    background-color: transparent;
+    outline: none;
+    appearance: none;
+    background: url('../public/img/1.png') no-repeat right;
+    background-position-x: calc(100% - 15px);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    padding-left: 14px;
+    padding-right: 75px;
+    cursor: pointer;
+}
+.selectBox {
+    display: flex;
+    flex-direction: row-reverse;
+}
