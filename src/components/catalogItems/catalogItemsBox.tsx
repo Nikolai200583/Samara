@@ -19,7 +19,7 @@ export const CatalogItemsBox: React.FC<NewTodoFormPropsSort> =({sort}) => {
 }
 
   return (
-    <div className="catalogItemsBox center">
+    <main className="catalogItemsBox center">
       {ITEMS.map((item) => (
         <CatalogItems
           key={item.id}
@@ -32,6 +32,6 @@ export const CatalogItemsBox: React.FC<NewTodoFormPropsSort> =({sort}) => {
           total={item.total}                       
         />
       ))}
-    </div>
+    </main>
   );
 };
