@@ -33,7 +33,7 @@ export const CartItem: React.FC<ItemsProps> = ({
         <div className="InputControls">                
             <span
               onClick={() => {
-                increase(id);
+                decrease(id);
               }}
               className="up"
             >&#8212;</span>         
@@ -46,7 +46,7 @@ export const CartItem: React.FC<ItemsProps> = ({
           />
           <span
               onClick={() => {
-                decrease(id);
+                increase(id);
               }}
               className="down"
             >	&#43;</span>            

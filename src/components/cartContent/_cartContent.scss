@@ -1,6 +1,7 @@
 
 .cart__content {
-    grid-column: span 8;
+   display: flex;
+   flex-direction: column;
 }
 
 .cart__form_button {
@@ -50,9 +51,12 @@
     }
 }
 .cart__form_price{
+    display: block;
     color: #000;   
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: 39px;
+    margin: 30px 47px 60px 0;
+    align-self: flex-end;
 }

@@ -1,8 +1,16 @@
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding-top: 37px;
   padding-bottom: 60px;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  width: 142px;
+  position: relative;
 }
 .navigation__link {
   color: #35383a;
@@ -16,4 +24,21 @@
     margin-right: 10px;
     flex-shrink: 0;
   }
+}
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; 
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #00A82D;
+  left: 90%;
+  bottom: 50%
 }

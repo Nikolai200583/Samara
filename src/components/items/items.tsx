@@ -1,6 +1,7 @@
 import { Items } from "../../type/data";
 import { useAppDispatch } from "../../hooks";
 import { addItem } from "../../store/slice";
+import { Button } from "../button/Button";
 
 export const CatalogItems: React.FC<Items> = (props) => {
   const { id, url, alt, title, price, count, total } = props;
@@ -24,6 +25,7 @@ export const CatalogItems: React.FC<Items> = (props) => {
       <img className="item__img" src={url} alt={alt} onClick={handleAction} />
       <h3 className="item__title">{title}</h3>
       <p className="item__price">{priceFormator.format(price)} руб.</p>
+      <Button/>
     </article>
   );
 };

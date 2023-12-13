@@ -3,8 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 type Item = {
     id: string;   
     url: string;   
-    title: string;
-    about: string;
+    title: string;   
     count: number;
     price: number;
     total: number    
@@ -30,8 +29,7 @@ const itemSlice = createSlice({
         state.list.push({
         id: action.payload.id,
         url: action.payload.url,
-        title: action.payload.title,
-        about: action.payload.about,
+        title: action.payload.title,     
         count: action.payload.count,
         price: action.payload.price,
         total: action.payload.price       
