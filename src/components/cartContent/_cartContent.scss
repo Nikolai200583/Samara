@@ -1,13 +1,4 @@
-.cart__name_box {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 14px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;    
-    align-items: center;
-    color: #000000;
-}
+
 .cart__content {
     grid-column: span 8;
 }
@@ -57,4 +48,11 @@
         color: #ffffff;
         background-color: #000000;
     }
+}
+.cart__form_price{
+    color: #000;   
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 39px;
 }

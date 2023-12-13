@@ -1,13 +1,12 @@
 
+.section-formAction{
+    height: 540px;
+    background: #F2F5F9;
+    display: flex;
+    justify-content: center;
+}
 .cart__form {
-    background: #F7F6F6;
-    height: 556px;
-    grid-column: span 4;
-    padding-left: 27px;
-    padding-right: 64px;
-    padding-top: 42px;
-    border: none;
-    border-radius: 20px;
+   width: 430px;
 
     &_name {
         font-style: normal;
@@ -74,17 +73,7 @@
             color: #000000;
         }
     }
-    &_price {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 29px;
-        display: flex;
-        justify-content: center;
-        color: #000000;
-        margin-top: 64px;
 
-    }
     &_buttontwo {
         background: transparent;
         border: 1px solid #000000;

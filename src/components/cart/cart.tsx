@@ -2,9 +2,8 @@ import { CartForm } from "../cartForm/cartForm";
 import { CartContent } from "../cartContent/cartContent";
 import { useState, useEffect } from "react";
 import { useAppSelector } from "../../hooks";
-import { useAppDispatch } from '../../hooks';
-import { removeItem } from '../../store/slice';
-
+import { useAppDispatch } from "../../hooks";
+import { removeItem } from "../../store/slice";
 
 export const CartContainer: React.FC = () => {
   const data = useAppSelector((state) => state.items.list);
@@ -14,23 +13,25 @@ export const CartContainer: React.FC = () => {
   const [total, setTotal] = useState(
     items.reduce((prev, curr) => prev + curr.total, 0)
   );
+
   useEffect(() => {
     setItems(data);
-  },[data]);
+  }, [data]);
 
   useEffect(() => {
     setTotal(items.reduce((prev, curr) => prev + curr.total, 0));
-  },[items]);
+  }, [items]);
 
   const increase = (id: string) => {
     setItems((items) => {
       return items.map((item) => {
         if (item.id === id) {
-          const newCount = item.count + 1 < 5 ? item.count + 1 : 5;
+          const newCount = item.count + 1 < 10 ? item.count + 1 : 10;
+
           return {
             ...item,
             count: newCount,
-            total: newCount * item.price
+            total: newCount * item.price,
           };
         }
         return item;
@@ -45,25 +46,27 @@ export const CartContainer: React.FC = () => {
           return {
             ...item,
             count: newCount,
-            total: newCount * item.price
+            total: newCount * item.price,
           };
         }
         return item;
       });
     });
-  };  
+  };
   const removeitem = (id: string) => {
-      dispatch(removeItem(id));   
-  }
- 
+    dispatch(removeItem(id));
+  };
+
   return (
-    <div className="cartContainer center">
-      <CartContent items={items}
+    <div className="cartContainer">
+      <CartContent
+        items={items}
+        allTotal={total}
         increase={increase}
-        decrease={decrease}       
+        decrease={decrease}
         removeitem={removeitem}
       />
-      <CartForm total={total} />
+      <CartForm/>
     </div>
   );
 };
