@@ -9,26 +9,16 @@ export const CartContainer: React.FC = () => {
   const data = useAppSelector((state) => state.items.list);
   const dispatch = useAppDispatch();
   const [items, setItems] = useState(data);
+  const [total, setTotal] = useState(0);
 
-  const [total, setTotal] = useState(
-    items.reduce((prev, curr) => prev + curr.total, 0)
-  );
-  const [counter, setCounter] = useState(
-    items.reduce((prev, curr) => prev + curr.count, 0)
-  );
   useEffect(() => {
     setItems(data);
   }, [data]);
 
   useEffect(() => {
-    setTotal(items.reduce((prev, curr) => prev + curr.total, 0)
-    );
+    setTotal(items.reduce((prev, curr) => prev + curr.total, 0));
   }, [items]);
 
-  useEffect(() => {
-    setCounter(items.reduce((prev, curr) => prev + curr.count, 0));
-  }, [items]);
-console.log(counter)
   const increase = (id: string) => {
     setItems((items) => {
       return items.map((item) => {
@@ -73,7 +63,7 @@ console.log(counter)
         decrease={decrease}
         removeitem={removeitem}
       />
-      <CartForm/>
+      <CartForm />
     </div>
   );
 };

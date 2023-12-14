@@ -1,22 +1,25 @@
 import { CatalogItems } from "../items/items";
 import { ITEMS } from "../../Const";
 
-
-interface NewTodoFormPropsSort { 
+interface NewTodoFormPropsSort {
   sort: string | null;
-  
 }
 
-export const CatalogItemsBox: React.FC<NewTodoFormPropsSort> =({sort}) => {
-
+export const CatalogItemsBox: React.FC<NewTodoFormPropsSort> = ({ sort }) => {
   switch (sort) {
-    case 'дешевые': ITEMS.sort(function(a, b) {return a.price - b.price});  
-        break;
-        case 'дорогие': ITEMS.sort(function(a, b) {return b.price - a.price});              
-        break;
+    case "дешевые":
+      ITEMS.sort(function (a, b) {
+        return a.price - b.price;
+      });
+      break;
+    case "дорогие":
+      ITEMS.sort(function (a, b) {
+        return b.price - a.price;
+      });
+      break;
     default:
-        break;       
-}
+      break;
+  }
 
   return (
     <main className="catalogItemsBox center">
@@ -26,10 +29,10 @@ export const CatalogItemsBox: React.FC<NewTodoFormPropsSort> =({sort}) => {
           id={item.id}
           url={item.image}
           alt={item.alt}
-          title={item.title}          
+          title={item.title}
           count={item.count}
           price={item.price}
-          total={item.total}                       
+          total={item.total}
         />
       ))}
     </main>

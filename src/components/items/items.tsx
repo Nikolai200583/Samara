@@ -15,7 +15,7 @@ export const CatalogItems: React.FC<Items> = (props) => {
         title: title,
         count: count,
         price: price,
-        total: total
+        total: total,
       })
     );
   };
@@ -25,7 +25,7 @@ export const CatalogItems: React.FC<Items> = (props) => {
       <img className="item__img" src={url} alt={alt} onClick={handleAction} />
       <h3 className="item__title">{title}</h3>
       <p className="item__price">{priceFormator.format(price)} руб.</p>
-      <Button/>
+      <Button />
     </article>
   );
 };
