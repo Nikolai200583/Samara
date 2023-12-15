@@ -149,15 +149,13 @@ a {
 
 .section-formAction {
   height: 540px;
-  background: #F2F5F9;
+  background: #f2f5f9;
   display: flex;
   justify-content: center;
+  padding-top: 70px;
 }
 
-.cart__form {
-  width: 430px;
-}
-.cart__form_name {
+.cart__form_title {
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -165,96 +163,130 @@ a {
   display: flex;
   justify-content: center;
   color: #000000;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .cart__form_input {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-  width: 288px;
-  height: 143px;
-  margin-bottom: 64px;
+  gap: 30px;
 }
-.cart__form_input_name {
-  background: transparent;
+.cart__form_input-name {
+  width: 430px;
+  height: 60px;
+  flex-shrink: 0;
+  background: #fff;
   border: none;
-  border-bottom: 1px solid #CACDD8;
 }
-.cart__form_input_name::-moz-placeholder {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
-}
-.cart__form_input_name::placeholder {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
-}
-.cart__form_input_telephone {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #CACDD8;
-}
-.cart__form_input_telephone::-moz-placeholder {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
-}
-.cart__form_input_telephone::placeholder {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
-}
-.cart__form_input_adress {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #CACDD8;
-}
-.cart__form_input_adress::-moz-placeholder {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
-}
-.cart__form_input_adress::placeholder {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
-}
-.cart__form_buttontwo {
-  background: transparent;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 20px;
-  width: 290px;
-  height: 41px;
-  font-style: normal;
-  font-weight: 400;
+.cart__form_input-name::-moz-placeholder {
+  color: #535860;
+  font-family: Montserrat;
   font-size: 16px;
-  line-height: 20px;
-  margin-top: 28px;
-  transition: all 0.3s;
-  animation: bounce-top 0.9s both;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.8px;
+  padding-left: 26px;
 }
-.cart__form_buttontwo_box {
-  display: flex;
-  justify-content: center;
+.cart__form_input-name::placeholder {
+  color: #535860;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.8px;
+  padding-left: 26px;
 }
-.cart__form_buttontwo:hover {
-  color: #ffffff;
-  background-color: #000000;
+.cart__form_input-telephone {
+  width: 430px;
+  height: 60px;
+  flex-shrink: 0;
+  background: #fff;
+  border: none;
+}
+.cart__form_input-telephone::-moz-placeholder {
+  color: #535860;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.8px;
+  padding-left: 26px;
+}
+.cart__form_input-telephone::placeholder {
+  color: #535860;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.8px;
+  padding-left: 26px;
+}
+.cart__form_input-adress {
+  width: 430px;
+  height: 60px;
+  flex-shrink: 0;
+  background: #fff;
+  border: none;
+}
+.cart__form_input-adress::-moz-placeholder {
+  color: #535860;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.8px;
+  padding-left: 26px;
+}
+.cart__form_input-adress::placeholder {
+  color: #535860;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.8px;
+  padding-left: 26px;
+}
+.cart__form_input-button {
+  width: 430px;
+  height: 60px;
+  flex-shrink: 0;
+  background: rgba(41, 109, 193, 0.5);
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 15.6px */
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border: none;
+}
+.cart__form_input-button::-moz-placeholder {
+  color: #535860;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.8px;
+  padding-left: 26px;
+}
+.cart__form_input-button::placeholder {
+  color: #535860;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.8px;
+  padding-left: 26px;
+}
+
+.cart__title {
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 39px;
 }
 
 .cart__item {

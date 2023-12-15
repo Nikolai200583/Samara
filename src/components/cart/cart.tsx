@@ -56,6 +56,7 @@ export const CartContainer: React.FC = () => {
 
   return (
     <div className="cartContainer">
+      <h1 className="cart__title">Корзина</h1>
       <CartContent
         items={items}
         allTotal={total}

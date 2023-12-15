@@ -2,29 +2,30 @@ export const CartForm = () => {
   return (
     <section className="section-formAction">
       <div className="cart__form">
-        <h3 className="cart__form_name">Пожалуйста, представьтесь</h3>
+        <h3 className="cart__form_title">Пожалуйста, представьтесь</h3>
         <form action="#" className="cart__form_input">
           <input
-            placeholder="Имя Фамилия"
+            placeholder="Ваше имя"
             type="text"
-            className="cart__form_input_name"
+            className="cart__form_input-name"
           />
           <input
-            placeholder="+ 7 904 000 00 00"
+            placeholder="Телефон"
             type="tel"
-            className="cart__form_input_telephone"
+            className="cart__form_input-telephone"
           />
           <input
-            placeholder="Адрес доставки"
+            placeholder="Email"
             type="text"
-            className="cart__form_input_adress"
+            className="cart__form_input-adress"
           />
-          <button
-            onClick={(event) => event.preventDefault()}
-            className="cart__form_buttontwo"
-          >
+        <button
+           placeholder="Оформить заказ"
+           className="cart__form_input-button"
+           type="submit"
+           onClick={(event) => event.preventDefault()}>
             Оформить заказ
-          </button>
+           </button>           
         </form>
       </div>
     </section>

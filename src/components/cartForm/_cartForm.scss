@@ -1,103 +1,108 @@
-
-.section-formAction{
-    height: 540px;
-    background: #F2F5F9;
-    display: flex;
-    justify-content: center;
+.section-formAction {
+  height: 540px;
+  background: #f2f5f9;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
 }
 .cart__form {
-   width: 430px;
+  
 
-    &_name {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 36px;
-        display: flex;
-        justify-content: center;
-        color: #000000;
-        margin-bottom: 35px;
+  &_title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    justify-content: center;
+    color: #000000;
+    margin-bottom: 30px;
+  }
+
+  &_input {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;   
+   
+   
+
+    &-name {
+      width: 430px;
+      height: 60px;
+      flex-shrink: 0;
+      background: #fff;
+      border: none;
     }
 
-    &_input {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        box-sizing: border-box;
-        width: 288px;
-        height: 143px;
-        margin-bottom: 64px;
-
-        &_name {
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid #CACDD8;
-
-        }
-
-        &_name::placeholder {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-            color: #000000;
-        }
-
-        &_telephone {
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid #CACDD8;
-
-        }
-
-        &_telephone::placeholder {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-            color: #000000;
-        }
-
-        &_adress {
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid #CACDD8;
-
-        }
-
-        &_adress::placeholder {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-            color: #000000;
-        }
+    &-name::placeholder {
+      color: #535860;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20.8px;
+      padding-left: 26px;
     }
 
-    &_buttontwo {
-        background: transparent;
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        border-radius: 20px;
-        width: 290px;
-        height: 41px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        margin-top: 28px;
-        transition: all 0.3s;
-        animation: bounce-top 0.9s both;
-        
-        &_box{
-           display: flex;
-           justify-content: center;
-        }
-
-        &:hover {
-            color: #ffffff;
-            background-color: #000000;
-        }
+    &-telephone {
+      width: 430px;
+      height: 60px;
+      flex-shrink: 0;
+      background: #fff;
+      border: none;
     }
-    
+
+    &-telephone::placeholder {
+      color: #535860;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20.8px;
+      padding-left: 26px;
+    }
+
+    &-adress {
+      width: 430px;
+      height: 60px;
+      flex-shrink: 0;
+      background: #fff;
+      border: none;
+    }
+
+    &-adress::placeholder {
+      color: #535860;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20.8px;
+      padding-left: 26px;
+    }
+    &-button {
+      width: 430px;
+      height: 60px;
+      flex-shrink: 0;
+      background: rgba(41, 109, 193, 0.5);
+      color: #fff;
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%; /* 15.6px */
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      border: none;     
+    }
+    &-button::placeholder {
+      color: #535860;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20.8px;
+      padding-left: 26px;
+    }
+  }
 }
