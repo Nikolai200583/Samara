@@ -1,11 +1,10 @@
-import { CartForm } from "../cartForm/cartForm";
+
 import { CartContent } from "../cartContent/cartContent";
 import { useState, useEffect } from "react";
-import { useAppSelector } from "../../hooks";
-import { useAppDispatch } from "../../hooks";
+import { useAppSelector, useAppDispatch } from "../../hooks";
 import { removeItem } from "../../store/slice";
 
-export const CartContainer: React.FC = () => {
+export const CartContainer = () => {
   const data = useAppSelector((state) => state.items.list);
   const dispatch = useAppDispatch();
   const [items, setItems] = useState(data);
@@ -28,7 +27,7 @@ export const CartContainer: React.FC = () => {
           return {
             ...item,
             count: newCount,
-            total: newCount * item.price,
+            total: newCount * item.price
           };
         }
         return item;
@@ -43,7 +42,7 @@ export const CartContainer: React.FC = () => {
           return {
             ...item,
             count: newCount,
-            total: newCount * item.price,
+            total: newCount * item.price
           };
         }
         return item;
@@ -64,7 +63,7 @@ export const CartContainer: React.FC = () => {
         decrease={decrease}
         removeitem={removeitem}
       />
-      <CartForm />
+     
     </div>
   );
 };

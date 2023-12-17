@@ -5,7 +5,7 @@ interface NewTodoFormPropsSort {
   sort: string | null;
 }
 
-export const CatalogItemsBox: React.FC<NewTodoFormPropsSort> = ({ sort }) => {
+export const CatalogItemsBox = ({ sort }: NewTodoFormPropsSort) => {
   switch (sort) {
     case "дешевые":
       ITEMS.sort(function (a, b) {
@@ -20,10 +20,10 @@ export const CatalogItemsBox: React.FC<NewTodoFormPropsSort> = ({ sort }) => {
     default:
       break;
   }
-
+ 
   return (
     <main className="catalogItemsBox center">
-      {ITEMS.map((item) => (
+      {ITEMS.map((item) => (       
         <CatalogItems
           key={item.id}
           id={item.id}
@@ -32,7 +32,7 @@ export const CatalogItemsBox: React.FC<NewTodoFormPropsSort> = ({ sort }) => {
           title={item.title}
           count={item.count}
           price={item.price}
-          total={item.total}
+          total={item.total}         
         />
       ))}
     </main>

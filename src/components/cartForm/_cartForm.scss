@@ -6,8 +6,6 @@
   padding-top: 70px;
 }
 .cart__form {
-  
-
   &_title {
     font-style: normal;
     font-weight: 600;
@@ -22,9 +20,7 @@
   &_input {
     display: flex;
     flex-direction: column;
-    gap: 30px;   
-   
-   
+    gap: 30px;
 
     &-name {
       width: 430px;
@@ -32,6 +28,7 @@
       flex-shrink: 0;
       background: #fff;
       border: none;
+      position: relative;
     }
 
     &-name::placeholder {
@@ -50,6 +47,7 @@
       flex-shrink: 0;
       background: #fff;
       border: none;
+      position: relative;
     }
 
     &-telephone::placeholder {
@@ -68,6 +66,7 @@
       flex-shrink: 0;
       background: #fff;
       border: none;
+      position: relative;
     }
 
     &-adress::placeholder {
@@ -93,7 +92,7 @@
       line-height: 130%; /* 15.6px */
       letter-spacing: 0.6px;
       text-transform: uppercase;
-      border: none;     
+      border: none;
     }
     &-button::placeholder {
       color: #535860;
@@ -105,4 +104,13 @@
       padding-left: 26px;
     }
   }
+}
+
+.errorMessage {
+  position: absolute;
+  color: #e86880;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }

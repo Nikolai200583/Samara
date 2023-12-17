@@ -14,9 +14,8 @@ interface ItemsProps {
   decrease: (id: string) => void;
   removeitem: (id: string) => void;
 }
-export const CartContent: React.FC<ItemsProps> = (props) => {
+export const CartContent = (props: ItemsProps) => {
   const { increase, decrease, items, removeitem, allTotal } = props;
-
   const priceFormator = new Intl.NumberFormat();
   return (
     <div className="cart__content center">
@@ -32,17 +31,6 @@ export const CartContent: React.FC<ItemsProps> = (props) => {
       <span className="cart__form_price">
         Сумма {priceFormator.format(allTotal)} &#8381;
       </span>
-      {/* <div className="cart__form_button">
-        <button
-          onClick={() => dispatch(removeCart())}
-          className="cart__button_clear"
-        >
-          Очистить корзину
-        </button>
-          <button onClick={() => navigator()} className="cart__button_continue">
-          Продолжить покупки
-        </button>
-      </div> */}
     </div>
   );
 };

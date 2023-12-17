@@ -1,21 +1,22 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-    font-family: 'Montserrat', sans-serif;   
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-@import './components/items/items';
-@import './components/catalogItems/catalogItems';
-@import './components/select/select';
-@import './components/header/header';
-@import './components/cartForm/cartForm';
-@import './components/cart/cart';
-@import './components/cartItem/cartItem';
-@import './components/cartContent/cartContent';
-@import './components/button/button';
-@import 'mobile';
+@import "./components/items/items";
+@import "./components/catalogItems/catalogItems";
+@import "./components/select/select";
+@import "./components/header/header";
+@import "./components/cartForm/cartForm";
+@import "./components/cart/cart";
+@import "./components/cartItem/cartItem";
+@import "./components/cartContent/cartContent";
+@import "./components/button/button";
+@import "./components/modal/modal";
+@import "mobile";

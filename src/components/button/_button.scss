@@ -1,4 +1,5 @@
-.buttonBye {
+.button {
+  position: absolute;
   width: 186px;
   height: 40px;
   color: #fff;
@@ -11,5 +12,10 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
   background: #296DC1;
-  display: none;
+  border: none;
+  opacity: 0;
+  transition: opacity .50s ease;
+  top: 87%;
+  cursor: pointer;
 }
+

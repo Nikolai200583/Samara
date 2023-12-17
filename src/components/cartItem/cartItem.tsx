@@ -11,12 +11,12 @@ interface ItemsProps {
   decrease: (id: string) => void;
   removeitem: (id: string) => void;
 }
-export const CartItem: React.FC<ItemsProps> = ({
+export const CartItem = ({
   item,
   increase,
   decrease,
-  removeitem,
-}) => {
+  removeitem
+}: ItemsProps) => {
   const { id, url, title, count, total } = item;
   const priceFormator = new Intl.NumberFormat();
 
@@ -53,12 +53,10 @@ export const CartItem: React.FC<ItemsProps> = ({
           }}
           className="down"
         >
-          {" "}
           &#43;
         </span>
       </div>
       <span className="cart__item_total">
-        {" "}
         {priceFormator.format(total)} &#8381;
       </span>
       <span onClick={() => removeitem(id)} className="cart__item_link">
