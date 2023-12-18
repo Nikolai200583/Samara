@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import React, {SetStateAction, Dispatch } from 'react';
+import React, {SetStateAction, Dispatch, useState } from 'react';
 
 interface MyForm {
   firstName: string;
@@ -13,10 +13,12 @@ interface User {
 }
 interface cartProps{
   isModal: Dispatch<SetStateAction<boolean>> 
-  setUser: Dispatch<SetStateAction<User>>  
+  setUser: Dispatch<SetStateAction<User>>
+  setCount: Dispatch<SetStateAction<number>>
+  count: number
 }
 
-export const CartForm = ({isModal, setUser}:cartProps) => {
+export const CartForm = ({isModal, setUser, setCount, count}:cartProps) => {
 
   const {
     register,
@@ -26,8 +28,12 @@ export const CartForm = ({isModal, setUser}:cartProps) => {
   } = useForm<MyForm>({
     mode: "onBlur"
   });
-  let count = 1;
- 
+  
+  function counter(){
+    setCount(count + 1);
+    isModal(true)
+  }
+  
   const onSubmit: SubmitHandler<MyForm> = (data) => { 
     const mail = `mailto:${data.mail}?subject=`
     const header = encodeURIComponent(`"Тестовое задание, заказ №${count}"`)
@@ -101,7 +107,7 @@ export const CartForm = ({isModal, setUser}:cartProps) => {
             className="cart__form_input-button"
             type="submit"
             disabled={!isValid}  
-            onClick ={() => isModal(true)}         
+            onClick ={counter}         
             style={{
               backgroundColor: isValid ? "#296DC1" : "rgba(41, 109, 193, 0.5)"
             }}                    
