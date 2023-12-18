@@ -1,5 +1,32 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { SetStateAction, Dispatch} from "react";
+import { SetStateAction, Dispatch } from "react";
+const nodemailer = require("nodemailer");
+const sendEmail = () => {
+
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,  
+    service: "smtp",
+    auth: {
+      user: "test200583@gmail.com", // Ваш email
+      pass: "rljh rhxp ejpd qngz" // Пароль от email
+    }
+  });
+  async function main() {
+    const info = await transporter.sendMail({
+      from: "test200583@gmail.com", // sender address
+      to: "test200583@gmail.com", // list of receivers
+      subject: "Hello ✔", // Subject line
+      text: "Hello world?", // plain text body
+      html: "<b>Hello world?</b>" // html body
+    });
+
+    console.log("Message sent: %s", info.messageId);
+  }
+
+  main().catch(console.error);
+};
 
 interface MyForm {
   firstName: string;
@@ -34,12 +61,12 @@ export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
   }
 
   const onSubmit: SubmitHandler<MyForm> = (data) => {
-
-    const mail = `mailto:${data.mail}?subject=`
-    const header = encodeURIComponent(`"Тестовое задание, заказ №${count}"`)
-    const body = encodeURIComponent(`"${data.firstName}, заказ №${count} сформирован. В ближайшее время наш специалист свяжется с вами по телефону ${data.phone}"`);
-    window.open(mail + header + "&body=" + body);
+    // const mail = `mailto:${data.mail}?subject=`
+    // const header = encodeURIComponent(`"Тестовое задание, заказ №${count}"`)
+    // const body = encodeURIComponent(`"${data.firstName}, заказ №${count} сформирован. В ближайшее время наш специалист свяжется с вами по телефону ${data.phone}"`);
+    // window.open(mail + header + "&body=" + body);
     setUser(data);
+    sendEmail();
     reset();
   };
 
@@ -47,13 +74,8 @@ export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
     <section className="section-formAction">
       <div className="cart__form">
         <h3 className="cart__form_title">Пожалуйста, представьтесь</h3>
-      
-        <form
-          action="/index.html"
-          method="post"
-          onSubmit={handleSubmit(onSubmit)}
-          className="cart__form_input"
-        >
+
+        <form onSubmit={handleSubmit(onSubmit)} className="cart__form_input">
           <div>
             <input
               {...register("firstName", {
