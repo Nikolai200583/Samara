@@ -57,8 +57,8 @@ a {
 }
 
 .center {
-  padding-left: calc(50% - 590px);
-  padding-right: calc(50% - 590px);
+  padding-left: calc(50% - 585px);
+  padding-right: calc(50% - 585px);
 }
 
 .catalogItemsBox {
@@ -580,10 +580,6 @@ input::-webkit-inner-spin-button {
   font-size: 40px;
   width: 40px;
   height: 40px;
-}
-
-.hidden {
-  display: none;
 }
 
 @media (max-width: 767px) {
