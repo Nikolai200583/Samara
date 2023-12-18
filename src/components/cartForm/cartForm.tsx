@@ -74,6 +74,9 @@ export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
           className="cart__form_input"
         >
           <div>
+          <input style={{visibility:"hidden", position: "absolute"}} name='count' type="number"
+          value={count}
+          />
             <input
               {...register("firstName", {
                 required: "Поле обязательно к заполнению",
