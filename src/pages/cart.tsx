@@ -2,8 +2,8 @@ import { Header } from "../components/header/header";
 import { CartContainer } from "../components/cart/cart";
 import { CartForm } from "../components/cartForm/cartForm";
 import { Modal } from "../components/modal/Modal";
-import React, {SetStateAction, Dispatch, useState } from 'react';
-
+import { Footer } from "../components/footer/Footer";
+import { SetStateAction, Dispatch, useState } from "react";
 
 interface User {
   phone?: number;
@@ -12,7 +12,7 @@ interface User {
 }
 interface cartProps {
   setCount: Dispatch<SetStateAction<number>>;
-  count: number
+  count: number;
 }
 export function Cart({ setCount, count }: cartProps) {
   const [modal, isModal] = useState<boolean>(false);
@@ -33,6 +33,7 @@ export function Cart({ setCount, count }: cartProps) {
       ) : (
         ""
       )}
+      <Footer />
     </div>
   );
 }
