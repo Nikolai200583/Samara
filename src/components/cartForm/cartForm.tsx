@@ -6,10 +6,15 @@ interface MyForm {
   phone: number;
   mail: string; 
 }
-
+interface User {
+  phone?: number;
+  user?: string;
+  mail?: string; 
+}
 interface cartProps{
   isModal: Dispatch<SetStateAction<boolean>> 
-  setUser: Dispatch<SetStateAction<MyForm>>
+  setUser: Dispatch<SetStateAction<User>> 
+ 
 }
 
 export const CartForm = ({isModal, setUser}:cartProps) => {
@@ -28,8 +33,8 @@ export const CartForm = ({isModal, setUser}:cartProps) => {
     const mail = `mailto:${data.mail}?subject=`
     const header = encodeURIComponent(`"Тестовое задание, заказ №${count}"`)
     const body = encodeURIComponent(`"${data.firstName}, заказ №${count} сформирован. В ближайшее время наш специалист свяжется с вами по телефону ${data.phone}"`);    
-    window.open(mail + header + "&body=" + body); 
-   setUser(data)
+    window.open(mail + header + "&body=" + body);       
+    setUser(data)
     reset();
     };
 

@@ -1,13 +1,13 @@
 import { useAppDispatch } from "../../hooks";
 import { removeCart } from "../../store/slice";
-interface ISubmitResult {
-  firstName: string;
-  phone: number;
-  mail: string;
+interface User {
+  phone?: number;
+  userName?: string;
+  
 }
-export const Modal = ({ user }: ISubmitResult) => {
-  console.log(user);
+export const Modal = ({phone, userName}:User) => {
   const dispatch = useAppDispatch();
+  
   return (
     <div className="modal__wrapper">
       <div className="modal__window">
@@ -15,11 +15,11 @@ export const Modal = ({ user }: ISubmitResult) => {
           &#215;
         </div>
         <h2 className="modal__title">
-          Спасибо <strong></strong>, ваш заказ <strong>№165796</strong>{" "}
+          Спасибо <strong>{userName}</strong>, ваш заказ <strong>№165796</strong>{" "}
           оформлен.
         </h2>
         <p className="modal__answer">
-          В ближайшее время мы свяжемся с вами по телефону <strong></strong> для
+          В ближайшее время мы свяжемся с вами по телефону <strong>{phone}</strong> для
           его подтверждения.
         </p>
       </div>
