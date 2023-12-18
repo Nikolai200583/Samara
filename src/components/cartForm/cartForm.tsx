@@ -1,5 +1,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { SetStateAction, Dispatch } from "react";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 interface MyForm {
   firstName: string;
@@ -19,6 +21,28 @@ interface cartProps {
 }
 
 export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = () => {
+    const currentForm = form.current;
+    if (currentForm == null) return;
+    console.log(currentForm)
+    emailjs
+      .sendForm(
+        "service_fvph3fn",
+        "template_irwzc6i",
+        currentForm,        
+        "kOzO1317prxpK-yvx"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   const {
     register,
     formState: { errors, isValid },
@@ -34,12 +58,7 @@ export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
   }
 
   const onSubmit: SubmitHandler<MyForm> = (data) => {
-    const mail = `mailto:${data.mail}?subject=`;
-    const header = encodeURIComponent(`"Тестовое задание, заказ №${count}"`);
-    const body = encodeURIComponent(
-      `"${data.firstName}, заказ №${count} сформирован. В ближайшее время наш специалист свяжется с вами по телефону ${data.phone}"`
-    );
-    window.open(mail + header + "&body=" + body);
+    sendEmail();   
     setUser(data);
     reset();
   };
@@ -49,7 +68,11 @@ export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
       <div className="cart__form">
         <h3 className="cart__form_title">Пожалуйста, представьтесь</h3>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="cart__form_input">
+        <form
+          ref={form}
+          onSubmit={handleSubmit(onSubmit)}
+          className="cart__form_input"
+        >
           <div>
             <input
               {...register("firstName", {
