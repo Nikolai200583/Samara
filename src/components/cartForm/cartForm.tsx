@@ -1,5 +1,5 @@
-import { SubmitHandler, useForm } from "react-hook-form";
-import React, { SetStateAction, Dispatch, useState } from "react";
+import { useForm } from "react-hook-form";
+import React, { SetStateAction, Dispatch } from "react";
 
 interface MyForm {
   firstName: string;
@@ -18,12 +18,11 @@ interface cartProps {
   count: number;
 }
 
-export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
+export const CartForm = ({ isModal, setCount, count }: cartProps) => {
   const {
-    register,
-    formState: { errors, isValid },
-    handleSubmit,
-    reset
+  
+    formState: { isValid },
+   
   } = useForm<MyForm>({
     mode: "onBlur"
   });
