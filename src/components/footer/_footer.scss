@@ -1,0 +1,13 @@
+.footer { 
+  margin-top: 70px;  
+  padding-bottom: 21px;
+  &__text {
+    border-top: 1px solid #a8afbb;
+    padding-top: 20px;
+    color: #7c828b;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15.6px;
+  }
+}
