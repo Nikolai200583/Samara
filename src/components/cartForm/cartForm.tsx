@@ -13,12 +13,11 @@ interface User {
 }
 interface cartProps{
   isModal: Dispatch<SetStateAction<boolean>> 
-  setUser: Dispatch<SetStateAction<User>> 
- 
+  setUser: Dispatch<SetStateAction<User>>  
 }
 
 export const CartForm = ({isModal, setUser}:cartProps) => {
-  
+
   const {
     register,
     formState: { errors, isValid },

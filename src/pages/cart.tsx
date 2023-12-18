@@ -6,15 +6,18 @@ import { useState } from "react";
 
 interface User {
   phone?: number;
-  user?: string;
+  firstName?: string;
   mail?: string; 
 }
 export function Cart() {
   const [modal, isModal] = useState<boolean>(false);
   const [user, setUser] = useState<User>({}); 
  
+  console.log(modal)
+  console.log(user)
  const phone = user.phone
- const userName = user.user
+ const userName = user.firstName
+ console.log(phone)
   return (
     <div className="wrapper">
       <Header title={"Корзина"} />
