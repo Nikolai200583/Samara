@@ -1,5 +1,6 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { SetStateAction, Dispatch } from "react";
+import { MaskedInput, createDefaultMaskGenerator } from "react-hook-mask";
+import { SetStateAction, Dispatch, useState } from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -19,19 +20,20 @@ interface cartProps {
   setCount: Dispatch<SetStateAction<number>>;
   count: number;
 }
+const maskGenerator = createDefaultMaskGenerator("+9(999) 999-99-99");
 
 export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
+  const [value, setValue] = useState("");
   const form = useRef<HTMLFormElement>(null);
-
   const sendEmail = () => {
     const currentForm = form.current;
     if (currentForm == null) return;
-    console.log(currentForm)
+    console.log(currentForm);
     emailjs
       .sendForm(
         "service_fvph3fn",
         "template_irwzc6i",
-        currentForm,        
+        currentForm,
         "kOzO1317prxpK-yvx"
       )
       .then(
@@ -58,7 +60,7 @@ export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
   }
 
   const onSubmit: SubmitHandler<MyForm> = (data) => {
-    sendEmail();   
+    sendEmail();
     setUser(data);
     reset();
   };
@@ -74,9 +76,12 @@ export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
           className="cart__form_input"
         >
           <div>
-          <input style={{visibility:"hidden", position: "absolute"}} name='count' type="number"
-          value={count}
-          />
+            <input
+              style={{ visibility: "hidden", position: "absolute" }}
+              name="count"
+              type="number"
+              value={count}
+            />
             <input
               {...register("firstName", {
                 required: "Поле обязательно к заполнению",
@@ -94,7 +99,9 @@ export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
             </div>
           </div>
           <div>
-            <input
+            <MaskedInput
+              maskGenerator={maskGenerator}
+              value={value}
               {...register("phone", {
                 required: "Поле обязательно к заполнению",
                 pattern: {
@@ -106,6 +113,7 @@ export const CartForm = ({ isModal, setUser, setCount, count }: cartProps) => {
               placeholder="Телефон"
               type="tel"
               className="cart__form_input-telephone"
+              onChange={setValue}
             />
             <div className="errorMessage">
               {errors?.phone && <p>{errors?.phone?.message}</p>}
