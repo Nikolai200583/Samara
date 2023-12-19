@@ -62,6 +62,7 @@ export const CartItem = ({
       <span onClick={() => removeitem(id)} className="cart__item_link">
         &#215;
       </span>
+      <button onClick={() => removeitem(id)} className="cart__item_button hidden">удалить</button>
     </div>
   );
 };

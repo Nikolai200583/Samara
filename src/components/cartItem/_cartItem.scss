@@ -52,6 +52,7 @@
     width: 40px;
     height: 40px;
     
+
     &:hover {
       background-color: #296dc1;
       color: #ffffff;
@@ -126,4 +127,18 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
   line-height: 130%;
   margin-right: 118px;
+}
+.cart__item_button {
+  width: 172px;
+  height: 40px;
+  background: #296dc1;
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  border: none;
+  display: none;
 }
