@@ -1,7 +1,6 @@
 .cart__item {
   border-bottom: 0.5px solid #cacdd8;
-  padding-top: 25px;
-  padding-bottom: 32px;
+  padding: 25px 30px 32px;
   display: flex;
   align-items: center;
 
@@ -45,13 +44,13 @@
   &_link {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     color: #000000;
     cursor: pointer;
     font-size: 40px;
     width: 40px;
     height: 40px;
-    
+    flex-grow: 1;
 
     &:hover {
       background-color: #296dc1;
@@ -119,6 +118,7 @@ input::-webkit-inner-spin-button {
   margin-right: 64px;
 }
 .cart__item_total {
+  width: 100px;
   color: #000;
   text-align: center;
   font-family: Montserrat;
@@ -142,4 +142,3 @@ input::-webkit-inner-spin-button {
   border: none;
   display: none;
 }
-
