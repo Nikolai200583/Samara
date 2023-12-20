@@ -251,12 +251,13 @@
     align-items: center;
   }
   .cart__item {
+    position: relative;
     width: 250px;
-    height: 426px;
+    height: 456px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
   }
   .cart__img {
     width: 200px;
@@ -265,9 +266,9 @@
     margin-bottom: 15px;
   }
   .cart__item_name {
+    width: 250px;
     margin: auto;
     text-align: center;
-    margin-bottom: 15px;
   }
   .InputControls {
     margin: auto;
@@ -288,6 +289,8 @@
   }
   .cart__form_price {
     font-size: 26px;
+    align-self: center;
+    margin: 30px 0 60px 0;
   }
   .cart__form_title {
     text-align: center;
