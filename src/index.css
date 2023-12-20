@@ -710,18 +710,18 @@ input::-webkit-inner-spin-button {
     order: 1;
   }
   .cart__item_name {
-    margin: auto;
+    margin: 0;
     text-align: center;
     margin-bottom: 15px;
     order: 2;
   }
   .InputControls {
-    margin: auto;
+    margin: 0;
     margin-bottom: 15px;
     order: 4;
   }
   .cart__item_total {
-    margin: auto;
+    margin: 0;
     text-align: center;
     order: 3;
     margin-top: 15px;
@@ -807,7 +807,7 @@ input::-webkit-inner-spin-button {
     order: 1;
   }
   .cart__item_name {
-    margin: auto;
+    margin: 0;
     text-align: center;
     margin-bottom: 15px;
     order: 2;
@@ -818,7 +818,7 @@ input::-webkit-inner-spin-button {
     order: 4;
   }
   .cart__item_total {
-    margin: auto;
+    margin: 0;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -900,17 +900,17 @@ input::-webkit-inner-spin-button {
   }
   .cart__item_name {
     width: 250px;
-    margin: auto;
     text-align: center;
+    margin: 0;
     order: 2;
   }
   .InputControls {
-    margin: auto;
+    margin: 0;
     margin-bottom: 15px;
     order: 4;
   }
   .cart__item_total {
-    margin: auto;
+    margin: 0;
     text-align: center;
     order: 3;
     margin-top: 15px;
