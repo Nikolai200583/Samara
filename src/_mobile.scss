@@ -81,19 +81,23 @@
     height: 400px;
     margin: auto;
     margin-bottom: 11px;
+    order: 1;
   }
   .cart__item_name {
     margin: auto;
     text-align: center;
     margin-bottom: 15px;
+    order: 2;
   }
   .InputControls {
     margin: auto;
     margin-bottom: 15px;
+    order: 4;
   }
   .cart__item_total {
     margin: auto;
     text-align: center;
+    order: 3;
   }
   .cart__form_price {
     font-size: 26px;
@@ -105,6 +109,7 @@
   }
   .cart__item_button {
     display: block;
+    order: 5;
   }
 }
 
@@ -174,19 +179,23 @@
     height: 400px;
     margin: auto;
     margin-bottom: 11px;
+    order: 1;
   }
   .cart__item_name {
     margin: auto;
     text-align: center;
     margin-bottom: 15px;
+    order: 2;
   }
   .InputControls {
     margin: auto;
     margin-bottom: 15px;
+    order: 4;
   }
   .cart__item_total {
     margin: auto;
     text-align: center;
+    order: 3;
   }
 
   .cart__form_price {
@@ -199,6 +208,7 @@
   }
   .cart__item_button {
     display: block;
+    order: 5;
   }
 }
 
@@ -246,6 +256,7 @@
   .footer {
     padding-bottom: 17px;
   }
+
   // корзина //
   .cart__content {
     align-items: center;
@@ -264,19 +275,23 @@
     height: 200px;
     margin: auto;
     margin-bottom: 15px;
+    order: 1;
   }
   .cart__item_name {
     width: 250px;
     margin: auto;
     text-align: center;
+    order: 2;
   }
   .InputControls {
     margin: auto;
     margin-bottom: 15px;
+    order: 4;
   }
   .cart__item_total {
     margin: auto;
     text-align: center;
+    order: 3;
   }
   .cart__form_input input {
     width: 290px;
@@ -300,5 +315,6 @@
   }
   .cart__item_button {
     display: block;
+    order: 5;
   }
 }
